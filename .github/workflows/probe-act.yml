@@ -1,0 +1,11 @@
+name: probe-action
+on: workflow_dispatch
+permissions: {}
+jobs:
+  t:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: iainmcgin/cla-github-action@0d27e5a16278d4adb6b0c4b92f08ad27b0a21dc8
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        continue-on-error: true

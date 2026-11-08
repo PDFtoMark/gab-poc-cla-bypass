@@ -1,0 +1,12 @@
+name: probe-plain
+on: workflow_dispatch
+permissions:
+  actions: write
+  contents: write
+  pull-requests: write
+  statuses: write
+jobs:
+  t:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo hello
